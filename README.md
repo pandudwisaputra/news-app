@@ -10,7 +10,7 @@ Run the following commands from your terminal:
 
 2) `flutter pub get` in the project root directory to install all the required dependencies.
 
-## Kriteria Wajib (Terpenuhi)
+## Deskripsi Aplikasi
 
 1) Pengambilan Data Dari API
 2) Menampilkan Notifikasi setiap jam 10 pagi
