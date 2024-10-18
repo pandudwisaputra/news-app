@@ -37,6 +37,3 @@ Run the following commands from your terminal:
   </tbody>
 </table>
 
-
-## LICENSE
-MMAS: Money Tracker is [MIT-licensed](https://github.com/floranguyen0/mmas-money-tracker/blob/main/LICENSE).
