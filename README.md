@@ -2,6 +2,8 @@
 
 News App menyediakan cara mudah bagi pengguna untuk mengakses dan membaca berita dari berbagai sumber. Aplikasi ini mengumpulkan konten berita, dan menyajikannya dalam format yang mudah digunakan. Aplikasi ini memiliki fitur notifikasi di setiap jam 10 pagi dengan berita acak serta memiliki light mode dan dark mode yang disesuaikan dengan tema sistem.
 
+[Watch the video demo](https://www.youtube.com/shorts/tJ0vsgk1Z9U)
+
 ## Setup
 
 Run the following commands from your terminal:
