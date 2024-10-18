@@ -36,7 +36,7 @@ class LocalNotificationService {
 
   static Future init() async {
     const AndroidInitializationSettings initializationSettingsAndroid =
-        AndroidInitializationSettings('@drawable/app_icon');
+        AndroidInitializationSettings('app_icon');
 
     const InitializationSettings initializationSettings =
         InitializationSettings(
@@ -69,8 +69,8 @@ class LocalNotificationService {
   }) async {
     tz.TZDateTime nextInstanceOfTenAMLastYear() {
       final tz.TZDateTime now = tz.TZDateTime.now(tz.local);
-      tz.TZDateTime scheduledDate =
-          tz.TZDateTime(tz.local, now.year, now.month, now.day, 10, 0);
+      tz.TZDateTime scheduledDate = tz.TZDateTime(
+          tz.local, now.year, now.month, now.day, 10, 00);
 
       if (scheduledDate.isBefore(now)) {
         scheduledDate = scheduledDate.add(const Duration(days: 1));
@@ -81,21 +81,23 @@ class LocalNotificationService {
 
     const AndroidNotificationDetails androidNotificationDetails =
         AndroidNotificationDetails(
-      '',
-      '',
-      channelDescription: 'description',
+      'your channel id',
+      'your channel name',
+      channelDescription: 'your channel description',
       importance: Importance.max,
       priority: Priority.high,
       ticker: 'ticker',
     );
+
+    const NotificationDetails notificationDetails = NotificationDetails(
+      android: androidNotificationDetails,
+    );
     await flutterLocalNotificationsPlugin.zonedSchedule(
-      0,
+      1,
       data.title,
       data.description,
       nextInstanceOfTenAMLastYear(),
-      const NotificationDetails(
-        android: androidNotificationDetails,
-      ),
+      notificationDetails,
       androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
       uiLocalNotificationDateInterpretation:
           UILocalNotificationDateInterpretation.absoluteTime,
